@@ -36,7 +36,7 @@ namespace StudentsDiary
         private void RefreshDiary()
         {            
             var students = fileHelper.DeserializeFromFile();
-            _groupId = cbSetGroupView.SelectedItem.ToString();
+            _groupId = cobSetGroupView.SelectedItem.ToString();
             switch (_groupId)
             {
                 case "1A":

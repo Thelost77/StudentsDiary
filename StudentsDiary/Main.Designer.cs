@@ -34,7 +34,7 @@ namespace StudentsDiary
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvDiary = new System.Windows.Forms.DataGridView();
-            this.cbSetGroupView = new System.Windows.Forms.ComboBox();
+            this.cobSetGroupView = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiary)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,10 +97,10 @@ namespace StudentsDiary
             this.dgvDiary.Size = new System.Drawing.Size(787, 386);
             this.dgvDiary.TabIndex = 4;
             // 
-            // cbSetGroupView
+            // cobSetGroupView
             // 
-            this.cbSetGroupView.FormattingEnabled = true;
-            this.cbSetGroupView.Items.AddRange(new object[] {
+            this.cobSetGroupView.FormattingEnabled = true;
+            this.cobSetGroupView.Items.AddRange(new object[] {
             "Wszyscy",
             "1A",
             "1B",
@@ -114,18 +114,17 @@ namespace StudentsDiary
             "5B",
             "6A",
             "6B"});
-            this.cbSetGroupView.SelectedItem = "Wszyscy";
-            this.cbSetGroupView.Location = new System.Drawing.Point(381, 12);
-            this.cbSetGroupView.Name = "cbSetGroupView";
-            this.cbSetGroupView.Size = new System.Drawing.Size(121, 21);
-            this.cbSetGroupView.TabIndex = 5;
+            this.cobSetGroupView.Location = new System.Drawing.Point(381, 12);
+            this.cobSetGroupView.Name = "cobSetGroupView";
+            this.cobSetGroupView.Size = new System.Drawing.Size(121, 21);
+            this.cobSetGroupView.TabIndex = 5;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 440);
-            this.Controls.Add(this.cbSetGroupView);
+            this.Controls.Add(this.cobSetGroupView);
             this.Controls.Add(this.dgvDiary);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnDelete);
@@ -146,7 +145,7 @@ namespace StudentsDiary
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridView dgvDiary;
-        private System.Windows.Forms.ComboBox cbSetGroupView;
+        private System.Windows.Forms.ComboBox cobSetGroupView;
     }
 }
 
