@@ -25,6 +25,7 @@ namespace StudentsDiary
         public Main()
         {       
             InitializeComponent();
+            cobSetGroupView.SelectedItem = "Wszyscy";
             RefreshDiary();
             SetColumnsHeaders();
             if (IsMaximize)            
