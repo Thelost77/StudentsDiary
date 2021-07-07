@@ -38,51 +38,13 @@ namespace StudentsDiary
         {            
             var students = fileHelper.DeserializeFromFile();
             _groupId = cobSetGroupView.SelectedItem.ToString();
-            switch (_groupId)
-            {
-                case "1A":
-                    dgvDiary.DataSource = students.Where(x => x.GroupId == "1A").ToList();
-                    break;
-                case "1B":
-                    dgvDiary.DataSource = students.Where(x => x.GroupId == "1B").ToList();
-                    break;
-                case "2A":
-                    dgvDiary.DataSource = students.Where(x => x.GroupId == "2A").ToList();
-                    break;
-                case "2B":
-                    dgvDiary.DataSource = students.Where(x => x.GroupId == "2B").ToList();
-                    break;
-                case "3A":
-                    dgvDiary.DataSource = students.Where(x => x.GroupId == "3A").ToList();
-                    break;
-                case "3B":
-                    dgvDiary.DataSource = students.Where(x => x.GroupId == "3B").ToList();
-                    break;
-                case "4A":
-                    dgvDiary.DataSource = students.Where(x => x.GroupId == "4A").ToList();
-                    break;
-                case "4B":
-                    dgvDiary.DataSource = students.Where(x => x.GroupId == "4B").ToList();
-                    break;
-                case "5A":
-                    dgvDiary.DataSource = students.Where(x => x.GroupId == "5A").ToList();
-                    break;
-                case "5B":
-                    dgvDiary.DataSource = students.Where(x => x.GroupId == "5B").ToList();
-                    break;
-                case "6A":
-                    dgvDiary.DataSource = students.Where(x => x.GroupId == "6A").ToList();
-                    break;
-                case "6B":
-                    dgvDiary.DataSource = students.Where(x => x.GroupId == "6B").ToList();
-                    break;
-                case "Wszyscy":
-                    dgvDiary.DataSource = students.OrderBy(x => x.Id).ToList();
-                    break;
-            }             
+            if (_groupId == "Wszyscy")
+                dgvDiary.DataSource = students.OrderBy(x => x.Id).ToList();
+            else
+                dgvDiary.DataSource = students.Where(x => x.GroupId == _groupId).ToList();            
+        }             
             
-        }
-
+        
         private void SetColumnsHeaders()
         {
             dgvDiary.Columns[0].HeaderText = "Numer";
